@@ -20,8 +20,8 @@ export default function App() {
     return <AppLoading startAsync={preload} onError={console.warn} onFinish={onFinish} />;
   }
   return (
-    <NavigationContainer>
-      <LoggedOutNav />
-    </NavigationContainer>
+      <NavigationContainer>
+        <LoggedOutNav />
+      </NavigationContainer>
   );
 }
