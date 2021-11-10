@@ -23,7 +23,7 @@ export default function LoggedOutNav() {
         }}
         component={Welcome}
       ></Stack.Screen>
-      <Stack.Screen name="Login" component={Login}></Stack.Screen>
+      <Stack.Screen name="LogIn" component={Login}></Stack.Screen>
       <Stack.Screen
         name="CreateAccount"
         component={CreateAccount}

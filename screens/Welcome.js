@@ -15,7 +15,7 @@ const LoginLink = styled.Text`
 
 export default function Welcome({ navigation }) {
   const goToCreateAccount = () => navigation.navigate("CreateAccount");
-  const goToLogin = () => navigation.navigate("Login");
+  const goToLogin = () => navigation.navigate("LogIn");
   return (
     <AuthLayout>
       <AuthButton
