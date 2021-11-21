@@ -1,5 +1,4 @@
-import { useMutation } from "@apollo/client";
-import gql from "graphql-tag";
+import { useMutation, gql } from "@apollo/client";
 import React, { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { logUserIn } from "../apollo";
@@ -29,6 +28,7 @@ export default function Login({ route: { params } }) {
     const {
       login: { ok, token },
     } = data;
+    console.log(data);
     if (ok) {
       await logUserIn(token);
     }
