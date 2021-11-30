@@ -10,7 +10,7 @@ export const PHOTO_FRAGMENT = gql`
   }
 `;
 
-export const COMMENT_FRAGMENT = gql`
+export const COMMENT_FRAGMENT = gql` 
   fragment CommentFragment on Comment {
     id
     user {
