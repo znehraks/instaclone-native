@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import {
   FlatList,
   Image,
+  StatusBar,
   Text,
   TouchableOpacity,
   useWindowDimensions,
@@ -62,16 +63,24 @@ export default function SelectPhoto({ navigation }) {
     }
   };
   const HeaderRight = () => (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate("UploadForm", {
+          file: chosenPhoto,
+        })
+      }
+    >
       <HeaderRightText>Next</HeaderRightText>
     </TouchableOpacity>
   );
   useEffect(() => {
     getPermissions();
+  }, []);
+  useEffect(() => {
     navigation.setOptions({
       headerRight: HeaderRight,
     });
-  }, []);
+  }, [chosenPhoto]);
 
   const numColumns = 4;
   const { width } = useWindowDimensions();
@@ -95,6 +104,7 @@ export default function SelectPhoto({ navigation }) {
   );
   return (
     <Container>
+      <StatusBar hidden={false} />
       <Top>
         {chosenPhoto !== "" ? (
           <Image

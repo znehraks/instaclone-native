@@ -112,8 +112,8 @@ function Photo({ id, user, caption, file, isLiked, likes }) {
         <Username>{user.username}</Username>
       </Header>
       <File
-        resizeMode="contain"
-        style={{ width, height: imageHeight }}
+        // resizeMode="cover"
+        style={{ width, height: 400 }}
         source={{ uri: file }}
       />
       <ExtraContainer>

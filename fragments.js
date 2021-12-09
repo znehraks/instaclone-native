@@ -10,7 +10,7 @@ export const PHOTO_FRAGMENT = gql`
   }
 `;
 
-export const COMMENT_FRAGMENT = gql` 
+export const COMMENT_FRAGMENT = gql`
   fragment CommentFragment on Comment {
     id
     user {
@@ -31,4 +31,19 @@ export const USER_FRAGMENT = gql`
     isFollowing
     isMe
   }
+`;
+
+export const FEED_PHOTO = gql`
+  fragment FeedPhoto on Photo {
+    ...PhotoFragment
+    user {
+      id
+      username
+      avatar
+    }
+    caption
+    createdAt
+    isMine
+  }
+  ${PHOTO_FRAGMENT}
 `;
