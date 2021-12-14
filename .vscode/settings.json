@@ -1,5 +1,7 @@
 {
-    "editor.fontSize": 20,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.fontSize": 20,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.editor.wrapTabs": true,
+  "editor.wordWrap": "on"
 }
